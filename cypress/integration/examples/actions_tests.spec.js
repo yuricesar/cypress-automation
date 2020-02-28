@@ -267,15 +267,19 @@ describe('MyTestSuite', function(){
 
     it('Deve marcar todos checkboxes', function(){
         cy.get('[type="checkbox"]').check()
+        cy.get('[type="checkbox"]').should('be.checked')
+
     })
 
     it('Deve desmarcar todos checkboxes', function(){
         cy.get('[type="checkbox"]').check()
         cy.get('[type="checkbox"]').uncheck()
+        cy.get('[type="checkbox"]').should('not.be.checked')
     })
 
     it('Deve marcar todos radios', function(){
         cy.get('[type="radio"]').check()
+        cy.get('[type="radio"]').should('be.checked')
     })
 
     it('Deve abrir alerta de todos usuários da tabela ao clicar nos botões', function(){
