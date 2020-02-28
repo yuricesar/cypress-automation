@@ -282,6 +282,12 @@ describe('MyTestSuite', function(){
         cy.get('[type="radio"]').should('be.checked')
     })
 
+    it('Devem ser visíveis todos checkboxes na página', function(){
+        cy.get('[type="checkbox"]').should('be.visible')
+        //basicamente a mesma checagem pode ser utilizada com qualquer elemento da página
+        //utilizei os checkboxes de exemplo
+    })
+
     it('Deve abrir alerta de todos usuários da tabela ao clicar nos botões', function(){
         const stub = cy.stub()
         cy.on('window:alert', stub)
